@@ -58,7 +58,7 @@ namespace ConsoleApplication60
 
 
 
-            //int n1 = int.Parse(Console.ReadLine());
+           
         }
     }
 }
