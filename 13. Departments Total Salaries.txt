@@ -1,0 +1,6 @@
+Select DepartmentId, Sum(Salary) as [TotalSalary]
+From Employees
+Group By DepartmentId
+Order By DepartmentId
+
+

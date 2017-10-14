@@ -1,0 +1,4 @@
+Select Count(Salary) as [Count]
+FROM Employees
+Where ManagerID is Null
+Group By ManagerID

@@ -1,0 +1,6 @@
+SELECT  left(FirstName,1) as [FirstLetter]
+  FROM WizzardDeposits
+  Where DepositGroup='Troll Chest'
+  Group  By left(FirstName,1)
+ -- Having Count(left(FirstName,1))=1
+  Order By left(FirstName,1)

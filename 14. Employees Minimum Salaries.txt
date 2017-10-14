@@ -1,0 +1,5 @@
+Select DepartmentId, Min(Salary) as [MinimumSalary]
+From Employees
+Where DepartmentId in (2,5,7) and Cast(HireDate as Datetime) >='2000-01-01'
+Group By DepartmentId
+

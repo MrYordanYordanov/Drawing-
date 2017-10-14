@@ -1,0 +1,8 @@
+
+select t1.DepartmentID,t1.Max as [ThirdHighestSalary] from
+(
+Select DepartmentID,Max(Salary) as Max,
+DENSE_RANK() Over(Partition BY DepartmentID Order BY Max(Salary)  DESC) as Rank
+ From Employees
+Group BY DepartmentID,Salary) as t1
+Where Rank=3

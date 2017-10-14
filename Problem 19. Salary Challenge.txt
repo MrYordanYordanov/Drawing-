@@ -1,0 +1,7 @@
+
+Select  top 10 FirstName,LastName, DepartmentID from Employees as e
+Where   Salary>
+(Select Avg(Salary) from Employees as e1
+Where e.DepartmentID =e1.DepartmentID
+Group By DepartmentID) 
+Order By DepartmentID

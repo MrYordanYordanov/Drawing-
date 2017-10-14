@@ -1,0 +1,2 @@
+SELECT   Count(id) as [count]
+From WizzardDeposits as e

@@ -1,0 +1,4 @@
+Select Top 1 with ties DepositGroup
+From WizzardDeposits
+Group By  DepositGroup
+ORder By AVG(MagicWandSize)

@@ -1,0 +1,14 @@
+SELECT *
+INTO EmployessAverageSales
+ FROM Employees
+ WHERE Salary > 30000
+
+ Delete From EmployessAverageSales
+ Where ManagerID=42
+
+ Update EmployessAverageSales
+ Set Salary+=5000
+ Where DepartmentID=1
+
+ Select DepartmentID,AVG(Salary)as [AverageSalary] from  EmployessAverageSales
+ group by DepartmentID

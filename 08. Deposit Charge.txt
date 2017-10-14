@@ -1,0 +1,4 @@
+SELECT DepositGroup,MagicWandCreator,Min(DepositCharge) [MinDepositCharge]
+FROM WizzardDeposits
+GROUP BY DepositGroup,MagicWandCreator
+Order By MagicWandCreator,DepositGroup

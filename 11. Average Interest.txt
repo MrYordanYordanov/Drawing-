@@ -1,0 +1,4 @@
+Select DepositGroup,IsDepositExpired,Avg(DepositInterest) as [AverageInterest] from WizzardDeposits
+Where DepositStartDate>'1985-01-01'
+group by DepositGroup,IsDepositExpired
+Order by  DepositGroup DESC,IsDepositExpired

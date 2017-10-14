@@ -1,0 +1,33 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT (case when Age <= 10
+             then '[0-10]'
+             when  Age >= 11 and  Age <= 20
+             then '[11-20]'
+             when  Age >= 21 and  Age <= 30
+             then '[21-30]'
+			  when  Age >= 31 and  Age <= 40
+             then '[31-40]'
+			  when  Age >= 41 and  Age <= 50
+             then '[41-50]'
+			  when  Age >= 51 and  Age <= 60
+             then '[51-60]'
+			  when  Age >= 61
+             then '[61+]'
+         end) AgeGroup,
+       count(*) as [WizardCount]
+  From WizzardDeposits
+ GROUP BY (case when Age <= 10
+             then '[0-10]'
+             when  Age >= 11 and  Age <= 20
+             then '[11-20]'
+             when  Age >= 21 and  Age <= 30
+             then '[21-30]'
+			  when  Age >= 31 and  Age <= 40
+             then '[31-40]'
+			  when  Age >= 41 and  Age <= 50
+             then '[41-50]'
+			  when  Age >= 51 and  Age <= 60
+             then '[51-60]'
+			  when  Age >= 61
+             then '[61+]'
+         end) 

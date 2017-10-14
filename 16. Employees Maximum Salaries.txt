@@ -1,0 +1,4 @@
+Select DepartmentID, MAX(Salary) as [MaxSalary]
+FROM Employees
+Group By DepartmentID
+Having  MAX(Salary) not Between 30000 and 70000
